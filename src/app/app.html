@@ -1,8 +1,15 @@
 
 <h2>Lista de Classificados:</h2>
+
+
+<div class="container">
+<div class="ocultarLista" *ngIf="minhaProp else meuTemplate"> Clique para ocultar a lista:
+  <button class="botãoOcultar" (click)="toggleButton()">Ocultar Lista</button>
+  </div>
+
+
 <div class="list" *ngIf="minhaProp">
 <app-person
-
   *ngFor="
     let person of listPeople; 
     let i = index;
@@ -16,16 +23,13 @@
   (personSelected)="selectPerson($event)">
 </app-person>
 </div>
-
-<div class="ocultarLista" *ngIf="minhaProp else meuTemplate">
-  <button class="botãoOcultar" (click)="toggleButton()">Ocultar Lista</button>
-  </div>
-
+  
   <ng-template #meuTemplate>
-    <div class="mostrarLista">
-    <button class="botãoExibir" (click)="toggleButton()">Mostra Lista</button>
+    <div class="mostrarLista">Clique para exibir a lista:
+    <button class="botãoExibir" (click)="toggleButton()">Exibir Lista</button>
     </div>
   </ng-template>
+  </div>
 
 
   <!--<div class="item item--highlighted">

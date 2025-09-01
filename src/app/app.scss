@@ -1,20 +1,42 @@
-.list{
+.list {
   background-color: rgb(169, 166, 166);
   padding: 3px;
   border: 3px solid black;
-  width: 50%;          
-  display: inline-block; 
-  max-width: 50%;    
+  width: 50%;
+  display: inline-block;
+  max-width: 50%;
+
+  max-height: 280px;   /* limite de altura */
+  overflow-y: auto;    /* ativa scroll vertical quando necessário */
 }
+.list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 4px;
+}
+
 .botãoOcultar{
+    display: inline-block;   /* garante que fique na mesma linha do texto */
+    margin-left: 5px; 
     padding: 10px 20px;
     border-radius: 12px; 
     background-color:rgb(169, 166, 166);
     
 }
 .botãoExibir{
+
+    display: inline-block;   /* garante que fique na mesma linha do texto */
+    margin-left: 5px; 
     padding: 10px 20px;
     border-radius: 12px; 
-    background-color:rgb(169, 166, 166);
-    
+    background-color:rgb(169, 166, 166);   
 }
+.container {
+  display: flex;
+  flex-direction: column; /* um abaixo do outro */
+  gap: 20px; /* espaço entre os componentes */
+}
+

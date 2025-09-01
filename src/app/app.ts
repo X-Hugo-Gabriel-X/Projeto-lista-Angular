@@ -15,9 +15,10 @@ export class App {
     {name: 'Gabriela de Fátima', age: 23, }, 
     {name: 'Paulo Guedes', age: 33, }, 
     {name: 'Levi', age: 27},
-    {name: 'Alicia', age: 20}
+    {name: 'Alicia', age: 20},
+    {name: 'Rogério', age: 40}
   ];
-  minhaProp = true;
+  minhaProp = false;
 
   toggleButton(){
     this.minhaProp = !this.minhaProp;
